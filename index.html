@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://play-lh.googleusercontent.com/FRnLA_MTARBsrMg-Dox3H9CTY2SnzdhGQzDmjtvwQU_h5E8Es2FgXmbwX4SElepdia8">
+  <title>Online Flashcards Maker </title>
+</head>
+<body>
+
+  <main>
+    
+    <header>
+      <div class="container">
+        <div id="header">
+          <h1> <img src="./4914892.png" alt="caricon," width="30px" height="30px"> Flashcards</h1>
+          <div>
+            <button class="button btn1" id="show_card_box"><span>Add Card</span>  </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section>
+      <div class="container">
+        <div id="create_card">
+          <h2 style="margin-bottom: 30px;">Create Flashcard</h2>
+          <label for="question" style="opacity: .8; ">Question</label>
+          <textarea id="question" maxlength="280"></textarea>
+          <label for="answer" maxlength="280"  style="opacity: .8;">Answer</label>
+          <textarea id="answer"></textarea>
+          <!-- <label for="tag" maxlength="280"  style="opacity: .8;">Tags</label> -->
+          <!-- <ul>
+            <li><input  id="unıts" type="checkbox" >  #Unit8</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit7</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit6</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit5</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit4</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit3</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit8</li>
+            <li><input  id="unıts" type="checkbox" >  #Unit1</li>
+          </ul> -->
+         
+    
+          <br>
+          <div>
+            <button class="btnSave"  id="save_card"><span class="save_icon">   <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Circle_Plus-256.png" alt="save," width="25px" height="25px"></span>  </button> 
+            <button class="btnClose"  id="close_card_box"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section>
+      <div class="container">
+        <div  id="flashcards"> </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <style>
+  .btnSave{ 
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none; 
+  color: rgb(0, 0, 0);
+  padding: 10px; 
+  border-radius: 4px;
+  border: 1px solid black;
+  }
+  .btnSave:hover{background-color: rgb(0, 0, 0);  border-color: white; }
+  .btnSave:hover span{filter: invert(100%) sepia(70%) saturate(0%) hue-rotate(293deg) brightness(106%) contrast(101%);}
+
+  .btnClose{ 
+  background-image: url(./2931151_close_delete_exit_remove_x_icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 330px;
+  background-color: rgba(238, 238, 238, 0);
+  border: none;
+  cursor: pointer;
+  padding: 10px; 
+  opacity: .5;
+  }
+  .btnClose:hover{
+    transform: rotate(90deg); 
+    transition: .5s transform; 
+    filter: invert(13%) sepia(92%) saturate(6097%) hue-rotate(360deg) brightness(114%) contrast(116%);
+  
+  }
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .btn1{ background-color:rgba(0, 156, 0, 0.329);}
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+
+  .btn1 span::after{
+    content: '\002B';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .btn2 span::after{
+    content: '\2212';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  </style>
+
+  <p id="footer"></p>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: whitesmoke;
+}
+
+.container{
+  width: 1280px;
+  margin: auto;
+}
+
+header{background-color: #fff;}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 20px;
+  background: #fff;
+}
+
+
+#create_card{
+  display: none;
+  width: 370px;
+  margin:auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba(60, 135, 31, 0.37);
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#create_card h2{
+  color: black;
+  text-align: center;
+}
+
+#create_card textarea{
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px dashed lightgray;
+  resize: none;
+}
+
+
+
+
+#answer{
+  color: green;
+}
+
+#create_card button{width: fit-content;}
+
+#flashcards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.flashcard{
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  position: relative;
+  height: auto;
+  width: 420px;
+    
+
+}
+
+.questionA{
+  text-align: center;
+}
+
+
+.flashcard h2{font-size: 1rem;}
+
+.fa-minus{
+  top: 3%;
+  right: 2%;
+  position: absolute;
+  color: #1a1a1a;
+  transition: 0.3s ease-out;
+}
+
+.fa-minus:hover{color: red;}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+}
+
